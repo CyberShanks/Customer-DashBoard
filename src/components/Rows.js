@@ -1,14 +1,24 @@
 const Rows = ({ users, query }) => {
   let actualQuery = Object.values(query);
 
-  const keys = ["name", "username", "email"];
+  // search functionality
+  const keys = [
+    "name",
+    "username",
+    "email",
+    ["address", "city"],
+    ["company", "name"],
+  ];
 
-  users = users.filter(user =>
-    keys.some(key => 
-      user[key].toLowerCase().includes(actualQuery[0].toLowerCase())
+  users = users.filter((user) =>
+    keys.some((key) =>
+      typeof key === "string"
+        ? user[key].toLowerCase().includes(actualQuery[0].toLowerCase())
+        : user[key[0]][key[1]]
+            .toLowerCase()
+            .includes(actualQuery[0].toLowerCase())
     )
   );
-  // users = users.filter(user => user.name.toLowerCase().includes(actualQuery[0].toLowerCase()));
 
   return (
     <tbody>
