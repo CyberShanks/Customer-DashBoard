@@ -1,11 +1,16 @@
+import { useContext } from "react";
+import { QueryContext } from "../App";
 
-const SearchBar = ({ updateQuery }) => {
+const SearchBar = () => {
+  let { setQuery } = useContext(QueryContext);
 
-    const triggerQueryUpdate = args => {
-        updateQuery(args);
-    }
-    return (
-        <input type="text" placeholder="Search" className="search" onChange={(e) => triggerQueryUpdate(e.target.value)}/>
-    )
-}
+  return (
+    <input
+      type="text"
+      placeholder="Search"
+      className="search"
+      onChange={(e) => setQuery(e.target.value)}
+    />
+  );
+};
 export default SearchBar;

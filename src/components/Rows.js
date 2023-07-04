@@ -1,5 +1,9 @@
-const Rows = ({ users, query }) => {
-  let actualQuery = Object.values(query);
+import { useContext } from "react";
+import { QueryContext } from "../App";
+
+const Rows = ({ users }) => {
+  let { query } = useContext(QueryContext);
+  console.log(query);
 
   // search functionality
   const keys = [
@@ -13,10 +17,8 @@ const Rows = ({ users, query }) => {
   users = users.filter((user) =>
     keys.some((key) =>
       typeof key === "string"
-        ? user[key].toLowerCase().includes(actualQuery[0].toLowerCase())
-        : user[key[0]][key[1]]
-            .toLowerCase()
-            .includes(actualQuery[0].toLowerCase())
+        ? user[key].toLowerCase().includes(query.toLowerCase())
+        : user[key[0]][key[1]].toLowerCase().includes(query.toLowerCase())
     )
   );
 

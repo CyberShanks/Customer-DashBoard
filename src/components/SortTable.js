@@ -4,7 +4,8 @@ import HeaderRows from "./TableHeader";
 
 const dataApi = "https://jsonplaceholder.typicode.com/users";
 
-const SortTable = (query) => {
+const SortTable = () => {
+
   const [users, setUsers] = useState([]);
 
   const updateSetUsers = (state) => {
@@ -26,12 +27,13 @@ const SortTable = (query) => {
   useEffect(() => {
     fetchUsers(dataApi);
   }, []);
+
   //empty dependency array for componentDidMount Method
   return (
     <>
       <table>
         <HeaderRows triggerUpdate={updateSetUsers} users={users} />
-        <Rows users={users} query={query} />
+        <Rows users={users}/>
       </table>
     </>
   );
