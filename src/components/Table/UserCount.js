@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { UserCountContext } from "../App";
+import { UserCountContext } from "../../App";
 
 // Displays Total Users fetched using userCount Context
 const UserCount = () => {
     const { userCount } = useContext(UserCountContext);
     return (
         <div>
-            <h2>Displaying <span id="count">{userCount}</span> Entries</h2>
+            <h2 id="count-msg">Displaying <span id="count">{userCount}</span> Entries</h2>
         </div>
     )
 }

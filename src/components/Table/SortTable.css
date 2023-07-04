@@ -9,7 +9,7 @@ table {
   }
   
   thead>tr{
-    font-size: 30px;
+    font-size: 1rem;
   }
   
   #id-column{
@@ -22,6 +22,7 @@ table {
   
   td{
     padding: 0.5rem;
+    font-size: 1rem;
   }
   
   th{
@@ -34,4 +35,8 @@ table {
   
   tbody>tr:hover{
     background-color: grey;
+  }
+
+  .sort-table{
+    cursor: pointer;
   }

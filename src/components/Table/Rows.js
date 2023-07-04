@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { QueryContext, UserCountContext } from "../App";
+import { QueryContext, UserCountContext } from "../../App";
 import { UserContext } from "./SortTable";
 
 // Filters Users based on the Search Query and sets the UserCount

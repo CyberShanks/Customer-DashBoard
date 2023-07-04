@@ -8,10 +8,9 @@
 
 .search{
   width: 60%;
-  padding: 1rem;
-  font-size: 5rem;
-  border: none;
-  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 15px;
 
 }
 
@@ -19,3 +18,7 @@
   text-decoration: underline;
 }
 
+#count-msg{
+  font-size: 1rem;
+  font-weight: normal;
+}
