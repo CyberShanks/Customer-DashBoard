@@ -7,10 +7,6 @@ export const UserContext = createContext(null);
 const SortTable = ({ dataURL }) => {
   const [users, setUsers] = useState([]);
 
-  const updateSetUsers = (state) => {
-    setUsers(state);
-  };
-
   const fetchUsers = async (url) => {
     try {
       const res = await fetch(url);

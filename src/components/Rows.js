@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { QueryContext } from "../App";
+import { QueryContext, UserCountContext } from "../App";
 import { UserContext } from "./SortTable";
 
 const Rows = () => {
 
-  let { query } = useContext(QueryContext);
+  const { query } = useContext(QueryContext);
   let { users } = useContext(UserContext);
+  const { setUserCount } = useContext(UserCountContext);
+
   // search functionality
   const keys = [
     "name",
@@ -22,6 +24,8 @@ const Rows = () => {
         : user[key[0]][key[1]].toLowerCase().includes(query.toLowerCase())
     )
   );
+
+  setUserCount(users.length);
 
   return (
     <tbody>
