@@ -1,9 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import Rows from "./Rows";
-import HeaderRows from "./TableHeader";
+import HeaderRows from "./HeaderRows";
 
+// User Context updated by <HeaderRows />, used by <Rows />
 export const UserContext = createContext(null);
 
+// Container Component for <HeaderRows/> and <Rows/>, provides them with UserContext
 const SortTable = ({ dataURL }) => {
   const [users, setUsers] = useState([]);
 

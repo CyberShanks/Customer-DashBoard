@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { QueryContext, UserCountContext } from "../App";
 import { UserContext } from "./SortTable";
 
+// Filters Users based on the Search Query and sets the UserCount
 const Rows = () => {
 
   const { query } = useContext(QueryContext);
@@ -17,6 +18,7 @@ const Rows = () => {
     ["company", "name"],
   ];
 
+  // Filtering the Users based on Query
   users = users.filter((user) =>
     keys.some((key) =>
       typeof key === "string"
@@ -25,6 +27,7 @@ const Rows = () => {
     )
   );
 
+  // Setting the user count
   setUserCount(users.length);
 
   return (

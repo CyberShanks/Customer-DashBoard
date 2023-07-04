@@ -1,14 +1,17 @@
+import { createContext, useState } from "react";
 import SortTable from "./components/SortTable";
 import SearchBar from "./components/SearchBar";
-import { createContext, useState } from "react";
 import UserCount from "./components/UserCount";
 
-export const QueryContext = createContext(null);
+// UserCount Context updated by <SortTable/Rows/>, used by <UserCount/>
 export const UserCountContext = createContext(null);
 
+// Query Context updated by <SearchBar/>, used by <SortTable/Rows>
+export const QueryContext = createContext(null);
+
+// API where JSON formatted data is fetched from
 const dataApi = "https://jsonplaceholder.typicode.com/users";
 
-// NEED TO USE useContext Hook for states -> userCount AND -> query
 const App = () => {
   const [query, setQuery] = useState("");
   const [userCount, setUserCount] = useState(0);
