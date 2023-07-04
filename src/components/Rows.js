@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { QueryContext, UserCountContext } from "../App";
 import { UserContext } from "./SortTable";
 
@@ -28,7 +28,9 @@ const Rows = () => {
   );
 
   // Setting the user count
-  setUserCount(users.length);
+  useEffect(() => {
+    setUserCount(users.length);
+  }, [users]);
 
   return (
     <tbody>

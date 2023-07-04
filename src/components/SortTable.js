@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import Rows from "./Rows";
 import HeaderRows from "./HeaderRows";
+import "./SortTable.css"
 
 // User Context updated by <HeaderRows />, used by <Rows />
 export const UserContext = createContext(null);
@@ -29,6 +30,14 @@ const SortTable = ({ dataURL }) => {
   return (
     <>
       <table>
+        <colgroup>
+          <col id="id-column"/>
+          <col className="info-column"/>
+          <col className="info-column"/>
+          <col className="info-column"/>
+          <col className="info-column"/>
+          <col className="info-column"/>
+        </colgroup>
         <UserContext.Provider value={{ users, setUsers }}>
           <HeaderRows />
           <Rows />

@@ -62,11 +62,11 @@ const HeaderRows = () => {
   return (
     <thead>
       <tr>
-        <th onClick={() => sorter("id")}>ID</th>
-        <th onClick={() => sorter("name")}>Name</th>
+        <th className="sort-table" onClick={() => sorter("id")}>ID</th>
+        <th className="sort-table" onClick={() => sorter("name")}>Name</th>
         <th>Username</th>
         <th>Email</th>
-        <th onClick={() => sorter("city")}>City</th>
+        <th className="sort-table" onClick={() => sorter("city")}>City</th>
         <th>Company</th>
       </tr>
     </thead>

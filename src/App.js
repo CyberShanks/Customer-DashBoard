@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import SortTable from "./components/SortTable";
 import SearchBar from "./components/SearchBar";
 import UserCount from "./components/UserCount";
+import "./App.css"
 
 // UserCount Context updated by <SortTable/Rows/>, used by <UserCount/>
 export const UserCountContext = createContext(null);

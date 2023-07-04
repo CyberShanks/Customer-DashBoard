@@ -1,0 +1,37 @@
+table {
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  thead {
+    background-color: yellow;
+  }
+  
+  thead>tr{
+    font-size: 30px;
+  }
+  
+  #id-column{
+    width: 4rem;
+  }
+  
+  .info-column{
+    width: 12rem;
+  }
+  
+  td{
+    padding: 0.5rem;
+  }
+  
+  th{
+    padding: 0.5rem;
+  }
+  
+  tr{
+    border: solid 1px black;
+  }
+  
+  tbody>tr:hover{
+    background-color: grey;
+  }

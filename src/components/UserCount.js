@@ -6,7 +6,7 @@ const UserCount = () => {
     const { userCount } = useContext(UserCountContext);
     return (
         <div>
-            <h2>Displaying {userCount} Entries</h2>
+            <h2>Displaying <span id="count">{userCount}</span> Entries</h2>
         </div>
     )
 }
