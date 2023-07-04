@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { QueryContext } from "../App";
+import { UserContext } from "./SortTable";
 
-const Rows = ({ users }) => {
+const Rows = () => {
+
   let { query } = useContext(QueryContext);
-  console.log(query);
-
+  let { users } = useContext(UserContext);
   // search functionality
   const keys = [
     "name",

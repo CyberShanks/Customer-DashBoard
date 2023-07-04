@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Rows from "./Rows";
 import HeaderRows from "./TableHeader";
 
-const dataApi = "https://jsonplaceholder.typicode.com/users";
+export const UserContext = createContext(null);
 
-const SortTable = () => {
-
+const SortTable = ({ dataURL }) => {
   const [users, setUsers] = useState([]);
 
   const updateSetUsers = (state) => {
@@ -25,15 +24,17 @@ const SortTable = () => {
   };
 
   useEffect(() => {
-    fetchUsers(dataApi);
+    fetchUsers(dataURL);
   }, []);
-
   //empty dependency array for componentDidMount Method
+
   return (
     <>
       <table>
-        <HeaderRows triggerUpdate={updateSetUsers} users={users} />
-        <Rows users={users}/>
+        <UserContext.Provider value={{ users, setUsers }}>
+          <HeaderRows />
+          <Rows />
+        </UserContext.Provider>
       </table>
     </>
   );

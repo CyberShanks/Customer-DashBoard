@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "./SortTable";
 
-const HeaderRows = ({ triggerUpdate, users }) => {
+const HeaderRows = () => {
     const [order, setOrder] = useState("asc");
+    const { users, setUsers } = useContext(UserContext);
 
     const sorter = (col) => {
         if (col === "name") {
@@ -9,13 +11,13 @@ const HeaderRows = ({ triggerUpdate, users }) => {
             const sorted = [...users].sort((a, b) =>
               a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
             );
-            triggerUpdate(sorted);
+            setUsers(sorted);
             setOrder("dsc");
           } else if (order === "dsc") {
             const sorted = [...users].sort((a, b) =>
               a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
             );
-            triggerUpdate(sorted);
+            setUsers(sorted);
             setOrder("asc");
           }
         }
@@ -25,14 +27,14 @@ const HeaderRows = ({ triggerUpdate, users }) => {
               const sorted = [...users].sort((a, b) =>
                 a["address"]["city"].toLowerCase() > b["address"]["city"].toLowerCase() ? 1 : -1
               );
-              triggerUpdate(sorted);
+              setUsers(sorted);
               setOrder("dsc");
             } else if (order === "dsc") {
               const sorted = [...users].sort((a, b) => 
     
                 a["address"]["city"].toLowerCase() < b["address"]["city"].toLowerCase() ? 1 : -1
               );
-              triggerUpdate(sorted);
+              setUsers(sorted);
               setOrder("asc");
             }
           }
@@ -44,13 +46,13 @@ const HeaderRows = ({ triggerUpdate, users }) => {
               const sorted = [...users].sort((a, b) =>
                 a["id"] > b["id"] ? 1 : -1
               );
-              triggerUpdate(sorted);
+              setUsers(sorted);
               setOrder("dsc");
             } else if (order === "dsc") {
               const sorted = [...users].sort((a, b) =>
                 a["id"] < b["id"] ? 1 : -1
               );
-              triggerUpdate(sorted);
+              setUsers(sorted);
               setOrder("asc");
             }
           }

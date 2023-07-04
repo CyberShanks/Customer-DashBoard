@@ -4,6 +4,8 @@ import { createContext, useState } from "react";
 
 export const QueryContext = createContext(null);
 
+const dataApi = "https://jsonplaceholder.typicode.com/users";
+
 // NEED TO USE useContext Hook for states -> userCount AND -> query
 const App = () => {
   const [query, setQuery] = useState("");
@@ -12,7 +14,7 @@ const App = () => {
     <div className="App">
       <QueryContext.Provider value={{ query, setQuery }}>
         <SearchBar />
-        <SortTable />
+        <SortTable dataURL={ dataApi } />
       </QueryContext.Provider>
     </div>
   );
