@@ -22,6 +22,48 @@ body, html, #root, .App{
 
 img{
   pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+
+  body, html, #root, .App{
+    height: fit-content;
+    display: flex;
+  }
+  .content-container{
+    padding: 0;
+  }
+
+  .main-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .side-bar{
+    visibility: hidden;
+    display: none;
+  }
+
+  p, td, th, h1, h2, .search{
+    font-size: 0.8rem;
+  }
+
+  .icon, #profile-img{
+    width: 10px;
+    height: 10px;
+  }
+
+  .search-area{
+    gap: 0.5rem;
+  }
+
+  .search{
+    padding: 1px;
+    border-radius: 10px;
+  }
+
+  html{
+    overflow:hidden
+  }
 
 }
 
