@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QueryContext } from "../../App";
+import { QueryContext } from "./Table";
 
 // Provides a Text Input Field which uses Change Event Listener to update the Query Context
 const SearchBar = () => {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserCountContext } from "../../App";
+import { UserCountContext } from "./Table";
 
 // Displays Total Users fetched using userCount Context
 const UserCount = () => {

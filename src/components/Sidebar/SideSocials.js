@@ -1,24 +1,33 @@
+import LinkContainer from "./LinkContainer";
+
+import githubIcon from "./assets/github.svg";
+import linkedinIcon from "./assets/linkedin.svg";
+import discordIcon from "./assets/icons8-discord.svg";
+
 const SideSocials = () => {
   return (
     <div className="social-links">
-      <div className="link-container">
-        <div className="icon">
-          <img src="assets/account.svg" alt="" />
-        </div>
-        <p className="side-text">GitHub</p>
+      <div className="side-social-header">
+        <h2>Socials</h2>
       </div>
-      <div className="link-container">
-        <div className="icon">
-          <img src="assets/message-text.svg" alt="" />
-        </div>
-        <p className="side-text">LinkedIn</p>
-      </div>
-      <div className="link-container">
-        <div className="icon">
-          <img src="assets/file-document.svg" alt="" />
-        </div>
-        <p className="side-text">Google</p>
-      </div>
+      <LinkContainer
+        icon={githubIcon}
+        url={"https://github.com/CyberShanks"}
+        name={"Github"}
+      />
+
+      <LinkContainer
+        icon={linkedinIcon}
+        url={"https://linkedin.com/in/shashank-mishra-722182205"}
+        name={"LinkedIn"}
+      />
+
+      <LinkContainer
+        icon={discordIcon}
+        url={"http://discordapp.com/users/shashank8129"}
+        name={"Discord"}
+      />
+
     </div>
   );
 };

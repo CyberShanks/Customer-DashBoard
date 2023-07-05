@@ -1,9 +1,11 @@
+import customerDashboardIcon from "./assets/account-group.svg";
+
 const SideCurrentPage = () => {
   return (
     <div className="current-page">
       <div className="link-container">
         <div className="icon">
-          <img src="assets/home.svg" alt="" />
+          <img className="icon" src={customerDashboardIcon} alt="" />
         </div>
         <p className="side-text">Customer Dashboard</p>
       </div>

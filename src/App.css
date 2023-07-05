@@ -1,24 +1,13 @@
-.App{
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+body, html{
+  margin: 0;
+  padding: 0;
 }
 
-.search{
-  width: 60%;
-  padding: 5px;
-  font-size: 1rem;
-  border-radius: 15px;
-
+.App {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 4fr 20fr;
 }
 
-#count{
-  text-decoration: underline;
-}
 
-#count-msg{
-  font-size: 1rem;
-  font-weight: normal;
-}

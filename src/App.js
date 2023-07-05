@@ -1,31 +1,17 @@
-import { createContext, useState } from "react";
-import SortTable from "./components/Table/SortTable";
-import SearchBar from "./components/Table/SearchBar";
-import UserCount from "./components/Table/UserCount";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Table from "./components/Table/Table";
+import Navbar from "./components/Navbar/Navbar"
 import "./App.css"
-
-// UserCount Context updated by <SortTable/Rows/>, used by <UserCount/>
-export const UserCountContext = createContext(null);
-
-// Query Context updated by <SearchBar/>, used by <SortTable/Rows>
-export const QueryContext = createContext(null);
 
 // API where JSON formatted data is fetched from
 const dataApi = "https://jsonplaceholder.typicode.com/users";
 
 const App = () => {
-  const [query, setQuery] = useState("");
-  const [userCount, setUserCount] = useState(0);
-
   return (
     <div className="App">
-      <UserCountContext.Provider value={{ userCount, setUserCount }}>
-        <QueryContext.Provider value={{ query, setQuery }}>
-          <SearchBar />
-          <SortTable dataURL={dataApi} />
-          <UserCount />
-        </QueryContext.Provider>
-      </UserCountContext.Provider>
+      <Navbar />
+      <Sidebar />
+      <Table dataURL={dataApi}/>
     </div>
   );
 };

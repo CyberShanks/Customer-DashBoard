@@ -1,0 +1,45 @@
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.side-bar {
+  grid-row: 1 / span 2;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+  gap: 1rem;
+}
+
+.side-header {
+  display: flex;
+  margin-bottom: 2em;
+  gap: 1em;
+}
+
+.sidebar-heading {
+  font-size: 25px;
+}
+
+.sidebar-icon{
+    width: 25px;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}
+
+.link-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-container:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  
