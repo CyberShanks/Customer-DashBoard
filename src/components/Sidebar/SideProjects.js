@@ -1,8 +1,8 @@
 import LinkContainer from "./LinkContainer";
-import restaurantIcon from "./assets/food.svg";
-import bagIcon from "./assets/bag-checked.svg";
-import clockIcon from "./assets/clock-time-eight.svg";
-import adminIcon from "./assets/account.svg";
+import restaurantIcon from "./assets/icons/food.svg";
+import bagIcon from "./assets/icons/bag-checked.svg";
+import clockIcon from "./assets/icons/clock-time-eight.svg";
+import adminIcon from "./assets/icons/account.svg";
 
 const SideProjects = () => {
   return (

@@ -1,5 +1,5 @@
-import "./Navbar.css";
-import darkMode from "./assets/brightness-6.svg";
+import "../components/Navbar/assets/css/Navbar.css";
+import darkMode from "../components/Navbar/assets/icons/brightness-6.svg";
 
 const Navbar = () => {
 

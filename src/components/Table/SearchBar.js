@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QueryContext } from "./Table";
+import { QueryContext } from "../../page/Dashboard";
 import searchIcon from "./assets/icons/magnify.svg";
 
 // Provides a Text Input Field which uses Change Event Listener to update the Query Context

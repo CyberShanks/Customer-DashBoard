@@ -1,8 +1,8 @@
 import LinkContainer from "./LinkContainer";
 
-import githubIcon from "./assets/github.svg";
-import linkedinIcon from "./assets/linkedin.svg";
-import discordIcon from "./assets/icons8-discord.svg";
+import githubIcon from "./assets/icons/github.svg";
+import linkedinIcon from "./assets/icons/linkedin.svg";
+import discordIcon from "./assets/icons/icons8-discord.svg";
 
 const SideSocials = () => {
   return (

@@ -1,7 +1,7 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import Table from "./components/Table/Table";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Sidebar from "./page/Sidebar";
+import Navbar from "./page/Navbar";
+import Footer from "./page/Footer";
+import DashboardPage from "./page/Dashboard";
 import "./App.css";
 
 // API where JSON formatted data is fetched from
@@ -13,7 +13,7 @@ const App = () => {
       <div className="main-content">
         <Navbar />
         <Sidebar />
-        <Table dataURL={dataApi} />
+        <DashboardPage dataURL={dataApi} />
       </div>
       <Footer />
     </div>

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { QueryContext, UserCountContext } from "./Table";
+import { QueryContext, UserCountContext } from "../../page/Dashboard";
 import { UserContext } from "./SortTable";
 import { rows } from "./constants";
 import get from "lodash.get";

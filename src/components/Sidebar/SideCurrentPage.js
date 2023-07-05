@@ -1,4 +1,4 @@
-import customerDashboardIcon from "./assets/account-group.svg";
+import customerDashboardIcon from "./assets/icons/account-group.svg";
 
 const SideCurrentPage = () => {
   return (

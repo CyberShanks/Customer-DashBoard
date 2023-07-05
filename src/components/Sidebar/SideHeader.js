@@ -1,4 +1,4 @@
-import dashBoardIcon from "./assets/view-dashboard-outline.svg"
+import dashBoardIcon from "./assets/icons/view-dashboard-outline.svg"
 
 const SideHeader = () => {
 
