@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
 import { QueryContext, UserCountContext } from "./Table";
 import { UserContext } from "./SortTable";
+import { rows } from "./constants";
+import get from "lodash.get";
 
 // Filters Users based on the Search Query and sets the UserCount
 const Rows = () => {
@@ -34,17 +36,13 @@ const Rows = () => {
 
   return (
     <tbody>
-      {users.map((currentUser) => {
-        const { id, name, username, email, address, company } = currentUser;
-
+      {users.map((user) => {
         return (
-          <tr key={id}>
-            <td>{id}</td>
-            <td>{name}</td>
-            <td>{username}</td>
-            <td>{email}</td>
-            <td>{address.city}</td>
-            <td>{company.name}</td>
+          <tr key={user.id}>
+            {rows.map(row => 
+              <td key={row.accessor}>
+                {get(user, row.accessor)}
+              </td>)}
           </tr>
         );
       })}

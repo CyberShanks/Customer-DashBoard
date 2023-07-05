@@ -29,14 +29,6 @@ const SortTable = ({ dataURL }) => {
   return (
     <>
       <table>
-        <colgroup>
-          <col id="id-column"/>
-          <col className="info-column"/>
-          <col className="info-column"/>
-          <col className="info-column"/>
-          <col className="info-column"/>
-          <col className="info-column"/>
-        </colgroup>
         <UserContext.Provider value={{ users, setUsers }}>
           <HeaderRows />
           <Rows />

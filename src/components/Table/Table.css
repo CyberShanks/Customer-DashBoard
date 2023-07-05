@@ -85,3 +85,7 @@ tbody > tr:hover {
   width: 15px;
   height: 15px;
 }
+
+.sorting{
+  background-color: red;
+}
