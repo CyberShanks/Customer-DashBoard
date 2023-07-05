@@ -2,6 +2,13 @@ import "./Navbar.css";
 import darkMode from "./assets/brightness-6.svg";
 
 const Navbar = () => {
+
+  const handleChangeTheme = () => {
+    const currentTheme = document.body.dataset.theme;
+    const nextTheme = currentTheme === "light"? "dark": "light";
+    document.body.dataset.theme = nextTheme;
+  }
+  
   return (
     <div className="navbar">
         <img
@@ -11,9 +18,9 @@ const Navbar = () => {
           className="icon"
         />
 
-      <div className="light-mode">
-        <img src={darkMode} id="night" className="icon" alt="" />
-      </div>
+      <span className="light-mode" onClick={handleChangeTheme}>
+        <img src={darkMode} id="night" className="icon" alt=""/>
+      </span>
     </div>
   );
 };

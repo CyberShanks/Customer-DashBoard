@@ -7,7 +7,7 @@ const SideCurrentPage = () => {
         <div className="icon">
           <img className="icon" src={customerDashboardIcon} alt="" />
         </div>
-        <p className="side-text">Customer Dashboard</p>
+        <p className="side-text">Dashboard</p>
       </div>
     </div>
   );

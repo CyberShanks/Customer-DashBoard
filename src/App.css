@@ -67,3 +67,15 @@ img{
 
 }
 
+
+body[data-theme="light"]{
+  /*TODO
+  Add Theme Tokens*/
+
+}
+
+body[data-theme="dark"]{
+  /*TODO
+  Add Theme Tokens*/
+  filter: invert(100%);
+}

@@ -1,0 +1,91 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+
+thead {
+  background-color: yellow;
+}
+
+thead > tr {
+  font-size: 1rem;
+}
+
+#id-column {
+  width: 4rem;
+}
+
+.info-column {
+  width: 12rem;
+}
+
+td {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+th {
+  padding: 0.5rem;
+}
+
+tr {
+  border: solid 1px black;
+}
+
+tbody > tr:hover {
+  background-color: grey;
+}
+
+.sort-table {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.search {
+  width: 80%;
+  padding: 9px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+
+#count {
+  text-decoration: underline;
+}
+
+#count-msg {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#content-container{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  max-width: 1100px;
+  justify-self: center;
+}
+
+.content-top{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.search-area{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrow{
+  width: 15px;
+  height: 15px;
+}
+
+.sorting{
+  background-color: red;
+}
