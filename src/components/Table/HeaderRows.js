@@ -1,5 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "./SortTable";
+import arrowIcon from "./assets/arrow_upward_black_24dp.svg";
 
 // Provides Header Rows which Sort the Table using Click Event Listener
 const HeaderRows = () => {
@@ -7,6 +8,7 @@ const HeaderRows = () => {
   const { users, setUsers } = useContext(UserContext);
 
   const sorter = (col) => {
+
     // if name clicked
     if (col === "name") {
       if (order === "asc") {
@@ -59,14 +61,24 @@ const HeaderRows = () => {
     }
   };
 
+
   return (
     <thead>
       <tr>
-        <th className="sort-table" onClick={() => sorter("id")}>ID</th>
-        <th className="sort-table" onClick={() => sorter("name")}>Name</th>
+        <th className="sort-table" id="id" onClick={() => sorter("id")}>
+          ID
+          <img className="arrow" src={arrowIcon} alt="" />
+        </th>
+        <th className="sort-table" id="name" onClick={() => sorter("name")}>
+          Name
+          <img className="arrow" src={arrowIcon} alt="" />
+        </th>
         <th>Username</th>
         <th>Email</th>
-        <th className="sort-table" onClick={() => sorter("city")}>City</th>
+        <th className="sort-table" id="city" onClick={() => sorter("city")}>
+          City
+          <img className="arrow" src={arrowIcon} alt="" />
+        </th>
         <th>Company</th>
       </tr>
     </thead>

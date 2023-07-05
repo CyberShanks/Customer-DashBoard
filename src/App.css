@@ -10,7 +10,7 @@ body, html, #root, .App{
 
 .main-content {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 8fr;
   grid-template-rows: 1fr 8fr;
   flex: 1 0 auto;
 }
@@ -18,5 +18,10 @@ body, html, #root, .App{
 .App{
   display: flex;
   flex-direction: column;
+}
+
+img{
+  pointer-events: none;
+
 }
 
