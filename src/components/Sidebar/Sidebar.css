@@ -8,8 +8,8 @@ a{
   padding: 1em;
   display: flex;
   flex-direction: column;
-  border: solid 1px black;
   gap: 1rem;
+  background-color: #fdba74;
 }
 
 .side-header {

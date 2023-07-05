@@ -1,13 +1,22 @@
-body, html{
+body, html, h1, h2{
   margin: 0;
   padding: 0;
 }
 
-.App {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 4fr 20fr;
+body, html, #root, .App{
+  height: 100%;
 }
 
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 8fr;
+  flex: 1 0 auto;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+}
 
