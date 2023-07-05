@@ -1,7 +1,7 @@
 import { useState, createContext } from "react";
 import SortTable from "./SortTable";
-import SearchBar from "./SearchBar";
 import UserCount from "./UserCount";
+import ContentTop from "./ContentTop";
 import "./Table.css"
 
 // UserCount Context updated by <SortTable/Rows/>, used by <UserCount/>
@@ -18,7 +18,7 @@ const Table = ({ dataURL }) => {
     <div id="content-container">
       <UserCountContext.Provider value={{ userCount, setUserCount }}>
         <QueryContext.Provider value={{ query, setQuery }}>
-          <SearchBar />
+          <ContentTop />
           <SortTable dataURL={dataURL} />
           <UserCount />
         </QueryContext.Provider>
