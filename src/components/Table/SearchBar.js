@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { QueryContext } from "./Table";
-import searchIcon from "./assets/magnify.svg";
+import searchIcon from "./assets/icons/magnify.svg";
 
 // Provides a Text Input Field which uses Change Event Listener to update the Query Context
 const SearchBar = () => {

@@ -11,7 +11,6 @@ const Rows = () => {
   let { users } = useContext(UserContext);
   const { setUserCount } = useContext(UserCountContext);
 
-  // search functionality
   const keys = [
     "name",
     "username",
@@ -20,7 +19,8 @@ const Rows = () => {
     ["company", "name"],
   ];
 
-  // Filtering the Users based on Query
+/* Filters the `users` array based on the `query` value. It uses the `filter` method to
+iterate over each user in the `users` array. */
   users = users.filter((user) =>
     keys.some((key) =>
       typeof key === "string"

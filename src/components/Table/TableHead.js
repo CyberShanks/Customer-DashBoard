@@ -2,38 +2,28 @@ import { useContext, useState, useRef } from "react";
 import { UserContext } from "./SortTable";
 import upArrowIcon from "./assets/icons/arrow_upward_black_24dp.svg";
 import downArrowIcon from "./assets/icons/south_black_24dp.svg";
-import get from "lodash.get";
-import { rows } from "./constants";
+import { rows, getUserSortByKey } from "./constants";
 
 const iconMap = {
   asc: upArrowIcon,
   dsc: downArrowIcon,
 };
 
-const getUserSortByKey = (accessor, nextOrder) => {
-  return (user1, user2) => {
-    const value1 = get(user1, accessor);
-    const value2 = get(user2, accessor);
-    if (!value1 || !value2) {
-      return 0;
-    }
-    if (typeof value1 === "string" && typeof value2 === "string") {
-      return nextOrder === "asc"
-        ? value1.localeCompare(value2)
-        : value2.localeCompare(value1);
-    }
-    return nextOrder === "asc" ? value1 - value2 : value2 - value1;
-  };
-};
 
 // Provides Header Rows which Sort the Table using Click Event Listener
-const HeaderRows = () => {
+const TableHead = () => {
   const [order, setOrder] = useState("asc");
   const { users, setUsers } = useContext(UserContext);
 
   const activeSorting = useRef("id");
   const rowSortedOrder = useRef(rows.map((row) => [row.accessor, "asc"]));
 
+/**
+ * The function sorts an array of users based on a specified row and toggles the sorting order.
+ * @param row - The `row` parameter represents the row or column that is being sorted. It is an object
+ * that contains information about the row, such as its accessor (a key used to access the value in
+ * each user object) and other properties.
+ */
   const sort = (row) => {
     const nextUsers = [...users];
     const nextOrder = order === "asc" ? "dsc" : "asc";
@@ -47,7 +37,7 @@ const HeaderRows = () => {
     setOrder(nextOrder);
   };
 
-  const handleClick = (item) => {
+  const handleSortClick = (item) => {
     if (item.sortable) {
       sort(item);
     }
@@ -77,7 +67,7 @@ const HeaderRows = () => {
               className={`sort-table ${
                 activeSorting.current === row.accessor ? "sorting" : ""
               }`}
-              onClick={() => handleClick(row)}
+              onClick={() => handleSortClick(row)}
             >
               {row.name}
               {sortIndicatorJSX}
@@ -89,4 +79,4 @@ const HeaderRows = () => {
   );
 };
 
-export default HeaderRows;
+export default TableHead;

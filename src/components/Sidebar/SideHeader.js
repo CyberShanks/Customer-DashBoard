@@ -7,7 +7,7 @@ const SideHeader = () => {
         <div className="sidebar-icon">
           <img src={dashBoardIcon} alt="" />
         </div>
-        <div className="sidebar-heading">Dashboard</div>
+        <div className="sidebar-heading">Shashanks'</div>
       </div>
     )
 }

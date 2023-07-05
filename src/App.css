@@ -67,6 +67,9 @@ img{
 
 }
 
+body {
+  background-color: white;
+}
 
 body[data-theme="light"]{
   /*TODO
@@ -77,5 +80,5 @@ body[data-theme="light"]{
 body[data-theme="dark"]{
   /*TODO
   Add Theme Tokens*/
-  filter: invert(100%);
+  filter: invert(0.7) hue-rotate(140deg);
 }

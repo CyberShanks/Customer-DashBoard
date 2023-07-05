@@ -2,7 +2,7 @@ import { useState, createContext } from "react";
 import SortTable from "./SortTable";
 import UserCount from "./UserCount";
 import ContentTop from "./ContentTop";
-import "./Table.css"
+import "./assets/css/Table.css"
 
 // UserCount Context updated by <SortTable/Rows/>, used by <UserCount/>
 export const UserCountContext = createContext(null);
